@@ -13,7 +13,7 @@ module.exports = {
     rules: [
       { test: /\.js$/, use: 'babel-loader' },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         use: [
           'style-loader',
           {
@@ -24,15 +24,15 @@ module.exports = {
             }
           }
         ],
-        include: /\.module\.css$/
+        include: /\.module\.scss$/
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         use: [
           'style-loader',
           'css-loader'
         ],
-        exclude: /\.module\.css$/
+        exclude: /\.module\.scss$/
       }
     ]
   },

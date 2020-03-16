@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Button.css';
+import './Button.scss';
 
 /**
  * This is a default button component
