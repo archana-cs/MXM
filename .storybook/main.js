@@ -1,7 +1,5 @@
-const path = require('path');
-
 module.exports = {
-  stories: ['../src/**/*.stories.(js|mdx)'],
+  stories: ['../src/**/*.stories.js'],
   addons: [
     '@storybook/preset-create-react-app',
     '@storybook/addon-actions',
@@ -10,15 +8,5 @@ module.exports = {
     '@storybook/addon-docs',
     '@storybook/addon-knobs/register',
     '@storybook/addon-storysource'
-  ],
-  webpackFinal: async config => {
-    // do mutation to the config
-    config.module.rules.push({
-      test: /\.css$/,
-      use: ['style-loader', 'css-loader', 'sass-loader'],
-      include: path.resolve(__dirname, '../')
-    });
-
-    return config;
-  }
+  ]
 };

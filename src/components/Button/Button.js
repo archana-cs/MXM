@@ -5,18 +5,16 @@ import './Button.scss';
 /**
  * This is a default button component
  */
-const Button = (oProps) => {
-  return (
-    <button
-      onClick={() => oProps.onClick()}
-      className='mcm-button'
-      disabled={oProps.disabled}
-    >
-      {oProps.label}
-    </button>
-  );
-};
-
+const Button = (oProps) => (
+  <button
+    onClick={oProps.onClick}
+    className="mcm-button"
+    type="button"
+    disabled={oProps.disabled}
+  >
+    {oProps.label}
+  </button>
+);
 Button.propTypes = {
   /**
    * Label for Button
@@ -25,12 +23,12 @@ Button.propTypes = {
   /**
    * To disable the button
    */
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
 };
 
 Button.defaultProps = {
   label: 'Button',
-  disabled: false
+  disabled: false,
 };
 
 export default Button;

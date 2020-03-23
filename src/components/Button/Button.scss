@@ -1,14 +1,14 @@
 .mcm-button {
-    height: 40px;
-    min-width: 70px;
-    background-color: #FF0073;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 5px;
-    color: #FFFFFF;
+  height: 40px;
+  min-width: 70px;
+  background-color: #ff0073;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 5px;
+  color: #fff;
 }
 
 .mcm-button:disabled,
 .mcm-button[disabled] {
-    background-color: #FF99C7;
+  background-color: #ff99c7;
 }
