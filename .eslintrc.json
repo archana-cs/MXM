@@ -39,6 +39,7 @@
     "serviceWorker.js",
     ".storybook/",
     "/node_modules/",
-    "/build/"
+    "/build/",
+    "**/*.test.js"
   ]
 }

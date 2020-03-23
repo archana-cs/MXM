@@ -60,12 +60,15 @@
     "stylelint": "^13.2.1",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.16.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8"
   },
   "lint-staged": {
     "*.{js, jsx}": [
-      "eslint --fix src"
+      "eslint --fix src",
+      "npm test"
     ],
     "*.scss": [
       "stylelint --fix src"
