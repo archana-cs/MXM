@@ -4,6 +4,7 @@
   background-position: $background-position;
   background-repeat: no-repeat;
   background-size: $background-size;
+
   @if $background-image != "" {
     background-image: url($background-image);
   }
