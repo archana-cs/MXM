@@ -1,0 +1,13 @@
+//First and second layer of css which contains global level variables and mixins as well as functions
+// This should be imported in the other css files
+//No css has to be included in this file
+
+
+
+@import "color-palette";
+@import "typography";
+@import "images";
+
+
+//should be imported at the end in this file
+@import "tools";

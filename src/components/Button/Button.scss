@@ -1,14 +1,16 @@
+@import '../../styleguide/styleguide';
+
 .mcm-button {
   height: 40px;
   min-width: 70px;
-  background-color: #ff0073;
+  background-color: $hot-pink-400;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 5px;
-  color: #fff;
+  color: $white;
 }
 
 .mcm-button:disabled,
 .mcm-button[disabled] {
-  background-color: #ff99c7;
+  opacity: 0.4;
 }
