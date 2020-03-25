@@ -1,7 +1,19 @@
 /*
   this file contains the css which is applied globally eg. * selector
 */
+@import 'typography';
+
+@font-face {
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Noto Sans"),
+  local("NotoSans"),
+  url("./fonts/noto-sans-v9-latin-regular.woff2") format("woff2"),
+  url("./fonts/noto-sans-v9-latin-regular.woff") format("woff");
+}
 
 * {
-  box-sizing: border-box;
+  font-family: 'NotoSans', sans-serif;
+  font-size: $font-14;
 }
