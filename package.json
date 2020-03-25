@@ -68,11 +68,11 @@
   },
   "lint-staged": {
     "*.{js, jsx}": [
-      "eslint --fix src",
+      "eslint src",
       "npm test"
     ],
     "*.scss": [
-      "stylelint --fix src"
+      "stylelint src"
     ]
   },
   "husky": {

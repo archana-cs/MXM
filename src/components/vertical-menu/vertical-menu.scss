@@ -1,0 +1,45 @@
+@import "../../styleguide/styleguide";
+
+.verticalMenu {
+  width: 250px;
+  height: 100%;
+  background-color: $midnight-blue-900;
+  transition: all .5s;
+  overflow-y: auto;
+
+  .verticalMenuHeader {
+    width: calc(100% - 40px);
+    height: 24px;
+    line-height: 24px;
+    padding: 19px 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+
+    .verticalMenuHeaderIcon {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      float: left;
+
+      &.appSwitcher {
+        @include background-properties($app-switcher, 18px, center)
+      }
+    }
+
+    .verticalMenuHeaderLabel {
+      font-size: $font-25;
+      font-weight: bold;
+      color: $hot-pink-400;
+      padding-left: 15px;
+      float: left;
+    }
+  }
+}
+
+.collapsibleViewWrapper {
+  &.collapsed {
+    .verticalMenu {
+      width: 64px;
+    }
+  }
+}
