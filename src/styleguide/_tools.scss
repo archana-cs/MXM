@@ -1,4 +1,6 @@
-//This file contains the mixins and sass functions only
+/*
+  This file contains the mixins and sass functions only
+*/
 
 @mixin background-properties($background-image, $background-size: cover, $background-position: center) {
   background-position: $background-position;
