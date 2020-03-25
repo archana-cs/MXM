@@ -1,16 +1,17 @@
 @import '../../styleguide/styleguide';
 
 .mcm-button {
-  height: 40px;
-  min-width: 70px;
-  background-color: $hot-pink-400;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
+  min-width: 120px;
+  height: 36px;
   border-radius: 5px;
+  background-color: $hot-pink-400;
   color: $white;
 }
 
-.mcm-button:disabled,
-.mcm-button[disabled] {
+.mcm-button:disabled {
   opacity: 0.4;
+}
+
+.mcm-button:focus {
+  outline: $hot-pink-400 auto 5px;
 }
