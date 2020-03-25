@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './vertical-menu-item.scss';
+import '../../../styleguide/_objects.scss';
 
 const oPropTypes = {
   id: PropTypes.string.isRequired,
@@ -14,11 +15,11 @@ const oPropTypes = {
 };
 
 /**
-    * list item view
-    * @param oProps
-    * @returns {*}
-    * @constructor
-    */
+ * list item view
+ * @param oProps
+ * @returns {*}
+ * @constructor
+ */
 const VerticalMenuItem = (oProps) => {
   const bIsSelected = oProps.id === oProps.selectedItemId;
   let sClassName = bIsSelected ? 'verticalMenuItem selected ' : 'verticalMenuItem ';
@@ -28,21 +29,19 @@ const VerticalMenuItem = (oProps) => {
   return (
     <div className={sClassName} onClick={() => oProps.onClickHandler(oProps.id)}>
       {bIsSelected ? <div className="selectedHighlight" /> : null}
-      {oProps.className ? <div className={`icon ${oProps.className}`} /> : <img src={oProps.icon} />}
+      {oProps.className ? <div className={`icon ${oProps.className}`} /> : <img alt="" src={oProps.icon} />}
       {bIsExpanded ? <div className="label ellipsis">{oProps.label}</div> : null}
       {bIsExpanded && oProps.count ? <div className="count">{oProps.count}</div> : null}
     </div>
   );
 };
 
-const oVerticalMenuItemDefaultProps = {
+VerticalMenuItem.propTypes = oPropTypes;
+VerticalMenuItem.defaultProps = {
   icon: '',
   className: 'defaultImage',
   count: 0,
   isCollapsed: false,
 };
-
-VerticalMenuItem.propTypes = oPropTypes;
-VerticalMenuItem.defaultProps = oVerticalMenuItemDefaultProps;
 
 export default VerticalMenuItem;

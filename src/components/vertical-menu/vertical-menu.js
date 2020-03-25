@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './vertical-menu.scss';
 import VerticalMenuItem from '../vertical-menu-item/vertical-menu-item';
-import oVerticalMenuDefaultProps from './vertical-menu-default-props';
 import CollapsibleView from '../collapsible/collapsible-view';
 
 const oPropTypes = {
@@ -21,7 +20,7 @@ const oPropTypes = {
     icon: PropTypes.string,
     className: PropTypes.string,
   }),
-  selectedItemId: PropTypes.string,
+  selectedItemId: PropTypes.string.isRequired,
   isCollapsed: PropTypes.bool,
   listHeaderClickHandler: PropTypes.func,
   listItemClickHandler: PropTypes.func,
@@ -80,6 +79,17 @@ const VerticalMenu = (oProps) => {
     </div>
 
   );
+};
+
+const oVerticalMenuDefaultProps = {
+  header: {
+    id: 'vertical-menu-id',
+    label: 'vertical-menu-label',
+    icon: 'vertical-menu-icon',
+  },
+  isCollapsed: false,
+  listHeaderClickHandler: () => {},
+  listItemClickHandler: () => {},
 };
 
 VerticalMenu.propTypes = oPropTypes;

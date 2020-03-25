@@ -4,7 +4,7 @@
   width: 250px;
   height: 100%;
   background-color: $midnight-blue-900;
-  transition: all .5s;
+  transition: all 0.2s;
   overflow-y: auto;
 
   .verticalMenuHeader {
@@ -22,7 +22,7 @@
       float: left;
 
       &.appSwitcher {
-        @include background-properties($app-switcher, 18px, center)
+        @include background-properties($app-switcher, 18px, center);
       }
     }
 
