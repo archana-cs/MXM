@@ -22,7 +22,7 @@
     top: 0;
   }
 
-  .icon {
+  .verticalMenuItemIcon {
     width: 24px;
     height: 24px;
     object-fit: contain;
@@ -65,7 +65,7 @@
     }
   }
 
-  .label {
+  .verticalMenuItemLabel {
     font-size: $font-14;
     color: $white;
     padding-left: 15px;
