@@ -1,3 +1,4 @@
+import '../styleguide/_genericCSS.scss';
 import React, { Component } from 'react';
 import Button from './Button/Button';
 

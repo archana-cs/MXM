@@ -1,0 +1,7 @@
+/*
+  This file imports the genericCSS in specific order which has to be included in the app.js file
+*/
+
+@import "generic";
+@import "elements";
+@import "objects";
