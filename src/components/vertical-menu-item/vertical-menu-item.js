@@ -28,7 +28,7 @@ const VerticalMenuItem = (oProps) => {
   return (
     <div className={sClassName} onClick={() => oProps.onClickHandler(oProps.id)}>
       {bIsSelected ? <div className="selectedHighlight" /> : null}
-      {oProps.className ? <div className={`icon ${oProps.className}`} /> : <img src={oProps.icon} />}
+      {oProps.className ? <div className={`icon ${oProps.className}`} /> : <img alt="defaultImage" src={oProps.icon} />}
       {bIsExpanded ? <div className="label ellipsis">{oProps.label}</div> : null}
       {bIsExpanded && oProps.count ? <div className="count">{oProps.count}</div> : null}
     </div>

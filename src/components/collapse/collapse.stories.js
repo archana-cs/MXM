@@ -2,16 +2,16 @@ import React from 'react';
 import {
   withKnobs, object,
 } from '@storybook/addon-knobs';
-import CollapsibleView from './collapsible-view';
+import Collapse from './collapse';
 
 export default {
   title: 'Collapsible View',
-  component: CollapsibleView,
+  component: Collapse,
   decorators: [withKnobs],
 };
 
 export const CollapsibleViewStory = () => (
-  <CollapsibleView
+  <Collapse
     ChildComponent={object('ChildComponent')}
   />
 );

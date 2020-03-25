@@ -13,7 +13,7 @@ export default {
 
 const oListItem = MockDataForVerticalMenu.items[0];
 
-export const ListItemViewStory = () => (
+export const VerticalMenuItemStory = () => (
   <VerticalMenuItem
     id={text('id', oListItem.id)}
     label={text('label', oListItem.label)}
@@ -25,6 +25,6 @@ export const ListItemViewStory = () => (
   />
 );
 
-ListItemViewStory.story = {
+VerticalMenuItemStory.story = {
   name: 'Vertical Menu Item View',
 };

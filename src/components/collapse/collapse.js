@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './collapsible-view.scss';
+import './collapse.scss';
 
-const CollapsibleView = (ChildComponent) => {
+const Collapse = (ChildComponent) => {
   if (!ChildComponent) {
-    throw new Element();
+    throw new Error('Component not found');
   }
 
   class WrapperComponent extends React.Component {
@@ -17,9 +17,8 @@ const CollapsibleView = (ChildComponent) => {
 
     onClickHandler() {
       const { isCollapsed } = this.state;
-      const bIsCollapsed = !isCollapsed;
       this.setState(
-        { isCollapsed: bIsCollapsed },
+        { isCollapsed: !isCollapsed },
       );
     }
 
@@ -42,7 +41,7 @@ const CollapsibleView = (ChildComponent) => {
   return WrapperComponent;
 };
 
-CollapsibleView.propTypes = {
+Collapse.propTypes = {
   ChildComponent: PropTypes.element.isRequired,
 };
-export default CollapsibleView;
+export default Collapse;

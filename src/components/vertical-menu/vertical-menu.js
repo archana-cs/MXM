@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './vertical-menu.scss';
 import VerticalMenuItem from '../vertical-menu-item/vertical-menu-item';
-import CollapsibleView from '../collapsible/collapsible-view';
+import Collapse from '../collapse/collapse';
 
 const oPropTypes = {
   items: PropTypes.arrayOf(
@@ -95,4 +95,4 @@ const oVerticalMenuDefaultProps = {
 VerticalMenu.propTypes = oPropTypes;
 VerticalMenu.defaultProps = oVerticalMenuDefaultProps;
 
-export default CollapsibleView(VerticalMenu);
+export default Collapse(VerticalMenu);
