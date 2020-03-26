@@ -35,10 +35,5 @@
     "jsx-a11y/no-static-element-interactions": "off", //this allows handlers on elements other than button/link
     "jsx-a11y/click-events-have-key-events": "off",
     "jsx-a11y/alt-text": "off"
-  },
-  "ignorePatterns": [
-    ".storybook/",
-    "/node_modules/",
-    "/build/"
-  ]
+  }
 }
