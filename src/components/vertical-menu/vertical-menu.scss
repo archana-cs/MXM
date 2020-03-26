@@ -2,10 +2,9 @@
 
 .vertical-menu {
   width: 250px;
-  height: 100%;
+  height: calc(100% - 60px);
   background-color: $midnight-blue-900;
-  transition: all .2s;
-  overflow-y: auto;
+  transition: all $transition-delay;
 
   .vertical-menu-item {
     &.header {
@@ -20,7 +19,6 @@
         font-size: $font-25;
         font-weight: bold;
         color: $hot-pink-400;
-        padding-left: 15px;
       }
     }
   }
