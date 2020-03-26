@@ -1,10 +1,9 @@
 @import "../../styleguide/styleguide";
 
 .verticalMenuItem {
-  width: calc(100% - 40px);
-  max-width: 210px;
-  height: 24px;
-  line-height: 24px;
+  width: 100%;
+  max-width: 250px;
+  height: 50px;
   padding: 13px 20px;
   background-color: $midnight-blue-900;
   cursor: pointer;
@@ -76,6 +75,7 @@
     padding-left: 15px;
     float: left;
     max-width: calc(100% - 40px);
+    line-height: 24px;
   }
 
   &.withCount {
