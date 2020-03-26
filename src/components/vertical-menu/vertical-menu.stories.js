@@ -14,8 +14,8 @@ export default {
 export const VerticalMenuStory = () => (
   <VerticalMenu
     isCollapsed={boolean('isCollapsed', false)}
-    header={object('header', MockDataForVerticalMenu.header)}
-    items={object('items', MockDataForVerticalMenu.items)}
+    menuHeaderItem={object('header', MockDataForVerticalMenu.menuHeaderItem)}
+    menuItemList={object('items', MockDataForVerticalMenu.menuItemList)}
     selectedItemId={text('selectedItemId', MockDataForVerticalMenu.selectedItemId)}
   />
 );
@@ -27,8 +27,8 @@ VerticalMenuStory.story = {
 export const CollapsibleVerticalMenuStory = () => (
   <CollapsibleVerticalMenu
     isCollapsed={boolean('isCollapsed', false)}
-    header={object('header', MockDataForVerticalMenu.header)}
-    items={object('items', MockDataForVerticalMenu.items)}
+    menuHeaderItem={object('header', MockDataForVerticalMenu.menuHeaderItem)}
+    menuItemList={object('items', MockDataForVerticalMenu.menuItemList)}
     selectedItemId={text('selectedItemId', MockDataForVerticalMenu.selectedItemId)}
   />
 );

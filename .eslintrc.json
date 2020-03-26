@@ -1,7 +1,8 @@
 {
   "env": {
     "browser": true,
-    "es6": true
+    "es6": true,
+    "jest": true
   },
   "extends": [
     "airbnb",
@@ -34,12 +35,5 @@
     "jsx-a11y/no-static-element-interactions": "off", //this allows handlers on elements other than button/link
     "jsx-a11y/click-events-have-key-events": "off",
     "jsx-a11y/alt-text": "off"
-  },
-  "ignorePatterns": [
-    "serviceWorker.js",
-    ".storybook/",
-    "/node_modules/",
-    "/build/",
-    "**/*.test.js"
-  ]
+  }
 }

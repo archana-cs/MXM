@@ -37,9 +37,7 @@ const VerticalMenuItem = (oProps) => {
    */
   const getVerticalMenuItemCount = () => (oProps.count ? <div className="vertical-menu-item-count">{oProps.count}</div> : null);
 
-  const getVerticalMenuItemLabel = () => (oProps.isCollapsed
-    ? null
-    : <div className="vertical-menu-item-label ellipsis">{oProps.label}</div>);
+  const getVerticalMenuItemLabel = () => <div className="vertical-menu-item-label ellipsis">{oProps.label}</div>;
 
   return (
     <div className={sClassName} onClick={() => oProps.menuItemClick(oProps.id)}>

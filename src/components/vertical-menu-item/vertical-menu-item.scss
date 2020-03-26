@@ -3,8 +3,8 @@
 .vertical-menu-item {
   width: 100%;
   max-width: 250px;
-  height: 50px;
-  padding: 13px 20px;
+  height: 60px;
+  padding: 18px 20px;
   background-color: $midnight-blue-900;
   cursor: pointer;
   position: relative;
@@ -20,7 +20,7 @@
   .selected-highlight {
     width: 4px;
     background-color: $hot-pink-400;
-    height: 50px;
+    height: 60px;
     position: absolute;
     left: 0;
     top: 0;
@@ -31,6 +31,10 @@
     height: 24px;
     object-fit: contain;
     float: left;
+
+    &.app-switcher {
+      @include background-properties($app-switcher);
+    }
 
     &.dashboard {
       @include background-properties($dashboard);
@@ -73,14 +77,14 @@
     font-size: $font-14;
     color: $white;
     padding-left: 15px;
-    float: left;
-    max-width: calc(100% - 40px);
+    display: inline-block;
+    max-width: calc(100% - 24px);
     line-height: 24px;
   }
 
   &.with-count {
     .vertical-menu-item-label {
-      max-width: calc(100% - 65px);
+      max-width: calc(100% - 50px);
     }
   }
 
