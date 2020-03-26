@@ -4,7 +4,6 @@ import {
 } from '@storybook/addon-knobs';
 import { verticalMenu as VerticalMenu, collapsibleVerticalMenu as CollapsibleVerticalMenu } from './vertical-menu';
 import MockDataForVerticalMenu from './tack/mock-data-for-vertical-menu';
-import '../../styleguide/app.scss';
 
 export default {
   title: 'Vertical Menu',
