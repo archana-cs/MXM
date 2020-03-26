@@ -14,7 +14,7 @@ const oPropTypes = {
 };
 
 /**
-    * list item view
+    * vertical menu item view
     * @param oProps
     * @returns {*}
     * @constructor
@@ -22,15 +22,37 @@ const oPropTypes = {
 const VerticalMenuItem = (oProps) => {
   const bIsSelected = oProps.id === oProps.selectedItemId;
   let sClassName = bIsSelected ? 'verticalMenuItem selected ' : 'verticalMenuItem ';
-  sClassName = (oProps.count && (sClassName += 'withCount')) || sClassName;
-  const bIsExpanded = !oProps.isCollapsed;
+  sClassName = (oProps.count && (sClassName += 'withCount ')) || sClassName;
+
+  /**
+   * if className is present then display custom Icon, o.w. display icon from server
+   * @returns {*}
+   */
+  const getVerticalMenuItemIcon = () => (oProps.className
+    ? <div className={`verticalMenuItemIcon ${oProps.className}`} />
+    : <img alt="defaultImage" src={oProps.icon} />);
+
+  /**
+   * To show icon below conditions are there:
+   * 1. vertical menu should be expanded
+   * 2. count must be greater than 0
+   * @returns {*}
+   */
+  const getVerticalMenuItemCount = () => {
+    const bShowCount = !oProps.isCollapsed && oProps.count;
+    return bShowCount ? <div className="count">{oProps.count}</div> : null;
+  };
+
+  const getVerticalMenuItemLabel = () => (oProps.isCollapsed
+    ? null
+    : <div className="verticalMenuItemLabel ellipsis">{oProps.label}</div>);
 
   return (
     <div className={sClassName} onClick={() => oProps.onClickHandler(oProps.id)}>
       {bIsSelected ? <div className="selectedHighlight" /> : null}
-      {oProps.className ? <div className={`verticalMenuItemIcon ${oProps.className}`} /> : <img alt="defaultImage" src={oProps.icon} />}
-      {bIsExpanded ? <div className="verticalMenuItemLabel ellipsis">{oProps.label}</div> : null}
-      {bIsExpanded && oProps.count ? <div className="count">{oProps.count}</div> : null}
+      {getVerticalMenuItemIcon()}
+      {getVerticalMenuItemLabel()}
+      {getVerticalMenuItemCount()}
     </div>
   );
 };

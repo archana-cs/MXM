@@ -6,7 +6,7 @@ import VerticalMenuItem from './vertical-menu-item';
 import MockDataForVerticalMenu from '../vertical-menu/tack/mock-data-for-vertical-menu';
 
 export default {
-  title: 'Vertical Menu Item View',
+  title: 'Vertical Menu Item',
   component: VerticalMenuItem,
   decorators: [withKnobs],
 };
@@ -26,5 +26,5 @@ export const VerticalMenuItemStory = () => (
 );
 
 VerticalMenuItemStory.story = {
-  name: 'Vertical Menu Item View',
+  name: 'Vertical Menu Item',
 };

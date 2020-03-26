@@ -27,7 +27,9 @@ const oPropTypes = {
 };
 
 /**
- * @description this view will render the list
+ * @description this view will return 2 modules
+ * 1. vertical menu list
+ * 2. vertical menu list with collapse functionality
  * @param oProps
  * @returns {*}
  * @constructor
@@ -95,4 +97,5 @@ const oVerticalMenuDefaultProps = {
 VerticalMenu.propTypes = oPropTypes;
 VerticalMenu.defaultProps = oVerticalMenuDefaultProps;
 
-export default Collapse(VerticalMenu);
+export const verticalMenu = VerticalMenu;
+export const collapsibleVerticalMenu = Collapse(VerticalMenu);
