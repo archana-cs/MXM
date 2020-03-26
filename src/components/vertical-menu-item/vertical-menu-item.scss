@@ -14,6 +14,10 @@
     background-color: $midnight-blue-700;
   }
 
+  &:hover {
+    background-color: $midnight-blue-700;
+  }
+
   .selectedHighlight {
     width: 4px;
     background-color: $hot-pink-400;
@@ -30,39 +34,39 @@
     float: left;
 
     &.dashboard {
-      @include background-properties($dashboard, 18px);
+      @include background-properties($dashboard);
     }
 
     &.reportingAndAnalytics {
-      @include background-properties($reporting-analytics, 18px);
+      @include background-properties($reporting-analytics);
     }
 
     &.products {
-      @include background-properties($product, 18px);
+      @include background-properties($product);
     }
 
     &.digitalAssets {
-      @include background-properties($dam, 18px);
+      @include background-properties($dam);
     }
 
     &.brandContent {
-      @include background-properties($brand-content, 18px);
+      @include background-properties($brand-content);
     }
 
     &.target {
-      @include background-properties($target, 18px);
+      @include background-properties($target);
     }
 
     &.campaignAndPromotion {
-      @include background-properties($campaign, 18px);
+      @include background-properties($campaign);
     }
 
     &.taskManager {
-      @include background-properties($task-manager, 18px);
+      @include background-properties($task-manager);
     }
 
     &.adminSettings {
-      @include background-properties($settings, 18px);
+      @include background-properties($settings);
     }
   }
 
@@ -80,16 +84,16 @@
     }
   }
 
-  .count {
-    width: 18px;
-    height: 18px;
-    line-height: 18px;
+  .verticalMenuItemCount {
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
     text-align: center;
     border-radius: 5px;
     background-color: $red;
     color: $white;
     font-size: $font-14;
-    margin: 4px;
+    margin: 1px;
     float: right;
   }
 }

@@ -1,11 +1,11 @@
 const MockDataForVerticalMenu = {
-  header: {
+  menuHeaderItem: {
     id: 'MXM',
     label: 'MXM',
     icon: '',
     className: 'appSwitcher',
   },
-  items: [
+  menuItemList: [
     {
       id: 'list-item-dashboard',
       label: 'Dashboard',

@@ -8,8 +8,8 @@ const oPropTypes = {
   icon: PropTypes.string, // To show icon saved on server side
   className: PropTypes.string, // To show custom icon
   count: PropTypes.number, // additional info related to list item
-  onClickHandler: PropTypes.func.isRequired, // To select the clicked item
-  selectedItemId: PropTypes.string.isRequired, // To highlight selected item & its background
+  menuItemClick: PropTypes.func.isRequired, // To select the clicked item
+  isSelected: PropTypes.string.isRequired, // To highlight selected item & its background
   isCollapsed: PropTypes.bool, // To hide label and count DOM
 };
 
@@ -20,8 +20,7 @@ const oPropTypes = {
     * @constructor
     */
 const VerticalMenuItem = (oProps) => {
-  const bIsSelected = oProps.id === oProps.selectedItemId;
-  let sClassName = bIsSelected ? 'verticalMenuItem selected ' : 'verticalMenuItem ';
+  let sClassName = oProps.isSelected ? 'verticalMenuItem selected ' : 'verticalMenuItem ';
   sClassName = (oProps.count && (sClassName += 'withCount ')) || sClassName;
 
   /**
@@ -33,23 +32,18 @@ const VerticalMenuItem = (oProps) => {
     : <img alt="defaultImage" src={oProps.icon} />);
 
   /**
-   * To show icon below conditions are there:
-   * 1. vertical menu should be expanded
-   * 2. count must be greater than 0
+   * To show icon count must be greater than 0
    * @returns {*}
    */
-  const getVerticalMenuItemCount = () => {
-    const bShowCount = !oProps.isCollapsed && oProps.count;
-    return bShowCount ? <div className="count">{oProps.count}</div> : null;
-  };
+  const getVerticalMenuItemCount = () => (oProps.count ? <div className="verticalMenuItemCount">{oProps.count}</div> : null);
 
   const getVerticalMenuItemLabel = () => (oProps.isCollapsed
     ? null
     : <div className="verticalMenuItemLabel ellipsis">{oProps.label}</div>);
 
   return (
-    <div className={sClassName} onClick={() => oProps.onClickHandler(oProps.id)}>
-      {bIsSelected ? <div className="selectedHighlight" /> : null}
+    <div className={sClassName} onClick={() => oProps.menuItemClick(oProps.id)}>
+      {oProps.isSelected ? <div className="selectedHighlight" /> : null}
       {getVerticalMenuItemIcon()}
       {getVerticalMenuItemLabel()}
       {getVerticalMenuItemCount()}

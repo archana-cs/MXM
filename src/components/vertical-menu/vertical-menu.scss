@@ -22,7 +22,7 @@
       float: left;
 
       &.appSwitcher {
-        @include background-properties($app-switcher, 18px, center);
+        @include background-properties($app-switcher);
       }
     }
 
@@ -40,6 +40,16 @@
   &.collapsed {
     .verticalMenu {
       width: 64px;
+    }
+
+    .verticalMenuItemCount {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      width: 17px;
+      height: 17px;
+      line-height: 17px;
+      font-size: $font-12;
     }
   }
 }
