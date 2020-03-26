@@ -74,13 +74,13 @@
     color: $white;
     padding-left: 15px;
     float: left;
-    max-width: calc(100% - 40px);
+    max-width: calc(100% - 24px);
     line-height: 24px;
   }
 
   &.with-count {
     .vertical-menu-item-label {
-      max-width: calc(100% - 65px);
+      max-width: calc(100% - 50px);
     }
   }
 
