@@ -20,30 +20,30 @@ const oPropTypes = {
     * @constructor
     */
 const VerticalMenuItem = (oProps) => {
-  let sClassName = oProps.isSelected ? 'verticalMenuItem selected ' : 'verticalMenuItem ';
-  sClassName = (oProps.count && (sClassName += 'withCount ')) || sClassName;
+  let sClassName = oProps.isSelected ? 'vertical-menu-item selected ' : 'vertical-menu-item ';
+  sClassName = (oProps.count && (sClassName += 'with-count ')) || sClassName;
 
   /**
    * if className is present then display custom Icon, o.w. display icon from server
    * @returns {*}
    */
   const getVerticalMenuItemIcon = () => (oProps.className
-    ? <div className={`verticalMenuItemIcon ${oProps.className}`} />
-    : <img alt="defaultImage" src={oProps.icon} />);
+    ? <div className={`vertical-menu-item-icon ${oProps.className}`} />
+    : <img alt="" src={oProps.icon} />);
 
   /**
    * To show icon count must be greater than 0
    * @returns {*}
    */
-  const getVerticalMenuItemCount = () => (oProps.count ? <div className="verticalMenuItemCount">{oProps.count}</div> : null);
+  const getVerticalMenuItemCount = () => (oProps.count ? <div className="vertical-menu-item-count">{oProps.count}</div> : null);
 
   const getVerticalMenuItemLabel = () => (oProps.isCollapsed
     ? null
-    : <div className="verticalMenuItemLabel ellipsis">{oProps.label}</div>);
+    : <div className="vertical-menu-item-label ellipsis">{oProps.label}</div>);
 
   return (
     <div className={sClassName} onClick={() => oProps.menuItemClick(oProps.id)}>
-      {oProps.isSelected ? <div className="selectedHighlight" /> : null}
+      {oProps.isSelected ? <div className="selected-highlight" /> : null}
       {getVerticalMenuItemIcon()}
       {getVerticalMenuItemLabel()}
       {getVerticalMenuItemCount()}

@@ -1,6 +1,6 @@
 @import "../../styleguide/styleguide";
 
-.verticalMenuItem {
+.vertical-menu-item {
   width: 100%;
   max-width: 250px;
   height: 50px;
@@ -17,7 +17,7 @@
     background-color: $midnight-blue-700;
   }
 
-  .selectedHighlight {
+  .selected-highlight {
     width: 4px;
     background-color: $hot-pink-400;
     height: 50px;
@@ -26,7 +26,7 @@
     top: 0;
   }
 
-  .verticalMenuItemIcon {
+  .vertical-menu-item-icon {
     width: 24px;
     height: 24px;
     object-fit: contain;
@@ -36,7 +36,7 @@
       @include background-properties($dashboard);
     }
 
-    &.reportingAndAnalytics {
+    &.reporting-analytics {
       @include background-properties($reporting-analytics);
     }
 
@@ -44,11 +44,11 @@
       @include background-properties($product);
     }
 
-    &.digitalAssets {
+    &.digital-assets {
       @include background-properties($dam);
     }
 
-    &.brandContent {
+    &.brand-content {
       @include background-properties($brand-content);
     }
 
@@ -56,20 +56,20 @@
       @include background-properties($target);
     }
 
-    &.campaignAndPromotion {
+    &.campaign-promotion {
       @include background-properties($campaign);
     }
 
-    &.taskManager {
+    &.task-manager {
       @include background-properties($task-manager);
     }
 
-    &.adminSettings {
+    &.admin-settings {
       @include background-properties($settings);
     }
   }
 
-  .verticalMenuItemLabel {
+  .vertical-menu-item-label {
     font-size: $font-14;
     color: $white;
     padding-left: 15px;
@@ -78,13 +78,13 @@
     line-height: 24px;
   }
 
-  &.withCount {
-    .verticalMenuItemLabel {
+  &.with-count {
+    .vertical-menu-item-label {
       max-width: calc(100% - 65px);
     }
   }
 
-  .verticalMenuItemCount {
+  .vertical-menu-item-count {
     width: 22px;
     height: 22px;
     line-height: 22px;

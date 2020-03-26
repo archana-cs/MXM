@@ -51,13 +51,13 @@ const VerticalMenu = (oProps) => {
     if (sClassName) {
       return (
         <div
-          className={`verticalMenuHeaderIcon ${sClassName}`}
+          className={`vertical-menu-header-icon ${sClassName}`}
           onClick={oProps.menuHeaderItemClick}
         />
       );
     }
 
-    return <img alt="noImageFound" src={oHeader.icon} />;
+    return <img alt="" src={oHeader.icon} />;
   };
 
   /**
@@ -70,9 +70,9 @@ const VerticalMenu = (oProps) => {
     }
 
     return (
-      <div className="verticalMenuHeader">
+      <div className="vertical-menu-header">
         {getMenuHeaderIcon(oHeader)}
-        {oProps.isCollapsed ? null : <div className="verticalMenuHeaderLabel">{oHeader.label}</div>}
+        {oProps.isCollapsed ? null : <div className="vertical-menu-header-label">{oHeader.label}</div>}
       </div>
     );
   };
@@ -92,7 +92,7 @@ const VerticalMenu = (oProps) => {
   });
 
   return (
-    <div className="verticalMenu">
+    <div className="vertical-menu">
       {getMenuHeaderItem(oProps.menuHeaderItem)}
       {getMenuItems(oProps.menuItemList)}
     </div>

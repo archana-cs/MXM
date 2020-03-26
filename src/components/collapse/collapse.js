@@ -24,14 +24,14 @@ const Collapse = (ChildComponent) => {
 
     render() {
       const { isCollapsed } = this.state;
-      const sClassName = isCollapsed ? 'collapsibleViewWrapper collapsed' : 'collapsibleViewWrapper expanded';
+      const sClassName = isCollapsed ? 'collapsible-wrapper collapsed' : 'collapsible-wrapper expanded';
 
       return (
         <div className={sClassName}>
           <ChildComponent {...this.props} {...this.state} />
-          <div className="collapsibleViewFooter" onClick={this.onClickHandler.bind(this)}>
-            <div className="icon" />
-            {isCollapsed ? null : <div className="label ellipsis">Collapse</div>}
+          <div className="collapsible-footer" onClick={this.onClickHandler.bind(this)}>
+            <div className="expand-collapse-icon" />
+            {isCollapsed ? null : <div className="collapsible-footer-label ellipsis">Collapse</div>}
           </div>
         </div>
       );
