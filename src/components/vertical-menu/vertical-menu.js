@@ -51,7 +51,7 @@ const VerticalMenu = (oProps) => {
     if (sClassName) {
       return (
         <div
-          className={`vertical-menu-header-icon ${sClassName}`}
+          className={`vertical-menu-item-icon header ${sClassName}`}
           onClick={oProps.menuHeaderItemClick}
         />
       );
@@ -70,13 +70,18 @@ const VerticalMenu = (oProps) => {
     }
 
     return (
-      <div className="vertical-menu-header">
+      <div className="vertical-menu-item header">
         {getMenuHeaderIcon(oHeader)}
-        {oProps.isCollapsed ? null : <div className="vertical-menu-header-label">{oHeader.label}</div>}
+        <div className="vertical-menu-item-label header ellipsis">{oHeader.label}</div>
       </div>
     );
   };
 
+  /**
+   * This function will render vertical menus items list
+   * @param aItemList
+   * @returns {*}
+   */
   const getMenuItems = (aItemList) => aItemList.map((oMenuItem) => {
     const bIsSelected = oMenuItem.id === selectedItemId;
 
