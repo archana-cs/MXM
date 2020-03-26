@@ -11,7 +11,7 @@ export default {
   decorators: [withKnobs],
 };
 
-const oListItem = MockDataForVerticalMenu.items[0];
+const oListItem = MockDataForVerticalMenu.menuItemList[0];
 
 export const VerticalMenuItemStory = () => (
   <VerticalMenuItem
@@ -21,7 +21,7 @@ export const VerticalMenuItemStory = () => (
     className={text('className', oListItem.className)}
     count={number('count', oListItem.count)}
     isCollapsed={boolean('isCollapsed', false)}
-    selectedItemId={text('selectedItemId', oListItem.id)}
+    isSelected={boolean('isSelected', true)}
   />
 );
 
