@@ -58,7 +58,7 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.0",
     "eslint-plugin-standard": "^4.0.1",
-    "stylelint": "^13.2.1",
+    "stylelint": "^15.10.1",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.16.0",
     "enzyme": "^3.11.0",
